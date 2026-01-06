@@ -8,14 +8,14 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class BlogController extends AbstractController
 {
-    #[Route('/blog', name: 'app_blog')]
+    #[Route('/', name: 'app_blog')]
     public function index(): Response
     {
         return $this->render('blog/index.html.twig', [
             'controller_name' => 'BlogController',
         ]);
     }
-    #[Route('/blog/home', name: 'app_home')]
+    #[Route('/home', name: 'app_home')]
     public function home(): response
     {
         return $this->render(
